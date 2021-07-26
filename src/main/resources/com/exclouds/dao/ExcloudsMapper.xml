@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--P_GetPTLogin 登录校验、修改密码-->
+<mapper namespace="com.exclouds.dao.ExcloudsMapper">
+    <select id="P_GetPTLogin" parameterType="map" resultType="java.util.HashMap" statementType="CALLABLE">
+        exec P_GetPTLogin #{user,mode=IN,jdbcType=VARCHAR},
+        #{password,mode=IN,jdbcType=VARCHAR},
+        #{flag,mode=IN,jdbcType=VARCHAR},
+        #{xpassword,mode=IN,jdbcType=VARCHAR}
+    </select>
+
+    <select id="P_GetBaseInfo" parameterType="map" resultType="java.util.HashMap" statementType="CALLABLE">
+        exec P_GetBaseInfo #{type,mode=IN,jdbcType=VARCHAR}
+    </select>
+
+    <select id="P_GetHDInfo" parameterType="map" resultType="java.util.HashMap" statementType="CALLABLE">
+        exec P_GetHDInfo #{type,mode=IN,jdbcType=VARCHAR},
+        #{data,mode=IN,jdbcType=VARCHAR}
+    </select>
+
+</mapper>

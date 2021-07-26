@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  tomcat:
+    max-threads: 50 # Maximum amount of worker threads.
+    min-spare-threads: 20 # Minimum amount of worker threads
+    max-connections: 50
+    connect-timeout: 300
+    max-keepalive: 100
+    accept-count: 10
+  servlet:
+    context-path: /exclouds
+
+mvc:
+  static-path-pattern: /**
+  http:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 10Mb
+  jackson:
+    default-property-inclusion: non_null
+  application.name: exclouds
+
+---
+url: https://whp.sdland-sea.com/api/whp-api/api2Cz/syncZxdInfo/GLJ
+encode.key: 'LHT_WHP_ZXDN_GLJ'
+iv: '0392039203920300'
+...

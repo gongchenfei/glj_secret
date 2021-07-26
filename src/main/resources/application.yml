@@ -1,0 +1,16 @@
+spring:
+  profiles.active: test
+  mvc:
+    static-path-pattern: /**
+  http:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 10Mb
+  jackson:
+    default-property-inclusion: non_null
+  datasource:
+    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=DB_3000
+    password: saisai3344
+    username: sa
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  application.name: exclouds
