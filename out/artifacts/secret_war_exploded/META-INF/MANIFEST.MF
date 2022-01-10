@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: carina
+Build-Jdk: 1.8.0_271
+Implementation-Title: secret
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.glj.aes
+Main-Class: ${start-class}
+
